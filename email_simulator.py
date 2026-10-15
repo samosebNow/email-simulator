@@ -35,6 +35,11 @@ class User:
         receiver.inbox.receive_email(email)
         print(f'Email sent from {self.name} to {receiver.name}!\n')
 
+    def check_inbox(self):
+        print(f"\n{self.name}'s Inbox:")
+        self.inbox.list_emails()
+        self.inbox.read_email(index)
+
 class Inbox:
     def __init__(self):
         self.emails = []
