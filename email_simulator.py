@@ -38,7 +38,12 @@ class User:
     def check_inbox(self):
         print(f"\n{self.name}'s Inbox:")
         self.inbox.list_emails()
+
+    def read_email(self, index):
         self.inbox.read_email(index)
+
+    def delete_email(self, index):
+        self.inbox.delete_email(index)
 
 class Inbox:
     def __init__(self):
